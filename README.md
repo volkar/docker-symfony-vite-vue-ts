@@ -81,7 +81,7 @@ npm run dev
 ```
 10. Open `http://localhost` in your browser.
 
-Admnistrator account created by fixtures is:
+Administrator account created by fixtures (for EasyAdmin access):
 - login: **admin@admin.com**
 - pass: **admin**
 
