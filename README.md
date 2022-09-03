@@ -1,11 +1,27 @@
-# docker-vite-symfony-nginx-php-postgres
+# docker-symfony-vite-vue-ts
 
-Minimal clean Docker configuration with PHP 8.1+, NGINX 1.20+, PostgreSQL 14.2+ and Symfony 6.0 for development.
+Docker configuration with PHP 8.1+, NGINX 1.20+, PostgreSQL 14.2+ and Symfony 6.0 for SPA (Single Page Application) development with EasyAdmin.
 
-- Based on Alpine Linux.
-- Xdebug and PHPUnit.
-- Doctrine
+![SPA preview](https://github.com/volkar/docker-symfony-vite-vue-ts/blob/main/preview.jpg?raw=true)
+
+### Docker container:
+- Based on Alpine Linux
+- Xdebug and PHPUnit
 - Makefile
+### Symfony backend:
+- Symfony Data Fixtures (pages, categories, projects, users)
+- Symfony Security for EasyAdmin
+- [Serenity theme](https://github.com/volkar/easyadmin-serenity-theme) for EasyAdmin
+ 
+### Vue frontend:
+- TypeScript
+- Vue 3
+- Vite for assets build
+- Pinia for data store
+- ky for fetching data
+- Simple SPA with basic routes for example
+- [Cache system](https://github.com/volkar/vue-pinia-cache-composables) requests for symfony backend
+
 
 ## Prerequisites
 
@@ -14,7 +30,6 @@ Required requisites:
 1. [Git](https://git-scm.com/book/en/Getting-Started-Installing-Git)
 2. [Docker](https://docs.docker.com/engine/installation/)
 3. [Docker Compose](https://docs.docker.com/compose/install/)
-4. [Composer](https://getcomposer.org)
 
 Docker and Docker Compose can be installed with [Docker Desktop](https://www.docker.com/products/docker-desktop/) app.
 
@@ -23,16 +38,16 @@ Docker and Docker Compose can be installed with [Docker Desktop](https://www.doc
 1. Clone the project:
 
 ```
-git clone https://github.com/volkar/docker-symfony-nginx-php-postgres.git
+git clone https://github.com/volkar/docker-symfony-vite-vue-ts.git
 ```
 
 2. Go to the project's folder
 
 ```
-cd /path/to/docker-symfony-nginx-php-postgres
+cd /path/to/docker-symfony-vite-vue-ts
 ```
 
-3. Update and install Composer packages
+3. Update and install composer packages
 
 ```
 composer update
@@ -44,11 +59,31 @@ composer update
 docker-compose up -d --build
 ```
 
-5. Open `http://localhost` in your browser, you should see the Symfony's welcome page.
+5. Enter container's shell
+```
+make bash
+```
+6. Load data from symfony fixtures
+```
+symfony console doctrine:fixtures:load
+```
+7. Exit container's shell
+```
+exit
+```
+8. Install all node's dependencies
+```
+npm install
+```
+9. Run Vite
+```
+npm run dev
+```
+10. Open `http://localhost` in your browser.
 
 ## Using
 
-### Using Docker Compose
+### Using Docker Composer
 
 Build and up:
 
@@ -78,9 +113,9 @@ docker-compose up -d --build
 
 ### Using PostgreSQL
 
-All .sql files inside `docker/postgres/conf` will be executed on container build. Currently, there is `docker/postgres/conf/create_test_table.sql` file, creating `test_table` with 3 records for testing purposes. It can be safely deleted.
-
 Postgres database name, user and password defined in `.env` file.
+
+All .sql files inside `docker/postgres/conf` will be executed on container build.
 
 Connect to database with default login:
 
@@ -131,7 +166,7 @@ To execute Makefile command use `make <command>` from project's folder
 
 List of commands:
 
-| Command | Description |
+| Command | Description | 
 | ----------- | ----------- |
 | up | Up containers |
 | down | Down containers |
@@ -149,6 +184,8 @@ Folders mapped for default Symfony folder structure (assuming local `/` is proje
 | / | /var/www | Project root |
 | /public | /var/www/public | Web server document root |
 | /logs/nginx | /var/logs/nginx | NGINX logs |
+| /docker/postgres/data | /var/lib/postgresql/data | PostgreSQL data files |
+
 
 Ports mapped default:
 
