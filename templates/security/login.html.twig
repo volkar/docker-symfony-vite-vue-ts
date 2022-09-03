@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Login</title>
+    <meta name="description" content="" />
+
+    <style>
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        :root {
+            font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+            font-size: 1.2vw;
+            line-height: 1.4em;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.87);
+            box-sizing: border-box;
+            background-color: #15181F;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            padding: 2em;
+            text-align: center;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 2em;
+            text-align: left;
+            display: inline-block;
+            margin: auto;
+        }
+        form h1 {
+            margin: 0 0 1em;
+        }
+        a {
+            color: #008fd9;
+        }
+        .form-item {
+            margin-bottom: 0.6em;
+        }
+        .form-button {
+            margin-top: 1em;
+        }
+        input.form-control {
+            border: 0;
+            width: 100%;
+            font-size: 1em;
+            padding: 0.5em;
+        }
+        button {
+            color: rgba(255, 255, 255, 0.87);
+            border: 0;
+            border-radius: 10em;
+            font-size: 1em;
+            padding: 0.4em 1.3em;
+            background-color: #008fd9;
+        }
+        .alert {
+            margin-bottom: 1.3em;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+    <div class="form-item">
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="E-mail" autocomplete="email" required autofocus>
+    </div>
+    <div class="form-item">
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" autocomplete="current-password" required>
+    </div>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" checked name="_remember_me"> Remember me
+        </label>
+    </div>
+
+    <div class="form-button">
+        <button class="btn btn-lg btn-primary" type="submit">
+            Sign in
+        </button>
+    </div>
+</form>
+</body>
+</html>

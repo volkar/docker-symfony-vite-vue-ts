@@ -1,0 +1,27 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "ky": "^0.31.1",
+        "path": "^0.12.7",
+        "pinia": "^2.0.21",
+        "vue": "^3.2.37",
+        "vue-router": "^4.1.2"
+    },
+    "devDependencies": {
+        "@typescript-eslint/parser": "^5.30.7",
+        "@vitejs/plugin-vue": "^3.0.0",
+        "@vue/eslint-config-typescript": "^11.0.0",
+        "eslint": "^8.20.0",
+        "eslint-plugin-vue": "^9.2.0",
+        "typescript": "^4.7.4",
+        "vite": "^3.0.0",
+        "vite-plugin-symfony": "^0.4.0-0",
+        "vue-tsc": "^0.38.4"
+    }
+}

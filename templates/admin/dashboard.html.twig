@@ -1,0 +1,16 @@
+{% extends "@EasyAdmin/page/content.html.twig" %}
+
+{% block content_title %}Administration{% endblock %}
+
+{% block main %}
+    <table class="datagrid">
+        <tbody>
+            {% for dataItem in dataCount %}
+                <tr>
+                    <td>{{ dataItem.title }}</td>
+                    <td>{{ dataItem.count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

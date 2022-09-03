@@ -1,0 +1,377 @@
+.ea-light-scheme {
+    --scheme-color-primary: #018ed7 !important;
+    --scheme-color-text: #181a1d;
+    --scheme-color-faded: #78aeca;
+
+    --scheme-color-bg: #ffffff;
+    --scheme-color-bg-accent: #f4f7fd;
+    --scheme-color-bg-strongaccent: #f5f8fe;
+
+    --scheme-color-border: #e5ecf5;
+}
+
+.ea-dark-scheme {
+    --scheme-color-primary: #008fd9 !important;
+    --scheme-color-text: #ecf2f8;
+    --scheme-color-faded: #3f6888;
+
+    --scheme-color-bg: #161b22;
+    --scheme-color-bg-accent: #12161c;
+    --scheme-color-bg-strongaccent: #0d1117;
+
+    --scheme-color-border: #1b262f;
+}
+
+.ea-dark-scheme, .ea-light-scheme {
+    --body-bg: var(--scheme-color-bg);
+    --responsive-header-bg: var(--scheme-color-bg-strongaccent);
+    --responsive-header-border-color: var(--scheme-color-bg-strongaccent);
+    --responsive-header-logo-color: var(--scheme-color-text);
+    --responsive-table-label-color: var(--scheme-color-faded);
+    --responsive-table-row-border-color: var(--scheme-color-border);
+    --sidebar-bg: var(--scheme-color-bg-strongaccent);
+    --sidebar-border-color: var(--scheme-color-bg-strongaccent);
+    --sidebar-logo-color: var(--scheme-color-text);
+    --sidebar-menu-color: var(--scheme-color-primary);
+    --sidebar-menu-badge-bg: var(--scheme-color-bg-accent);
+    --sidebar-menu-badge-color: var(--scheme-color-text);
+    --sidebar-menu-badge-active-bg: var(--scheme-color-primary);
+    --sidebar-menu-badge-active-color: var(--scheme-color-text);
+    --sidebar-menu-submenu-color: var(--scheme-color-faded);
+    --sidebar-menu-header-color: var(--scheme-color-text);
+    --sidebar-menu-icon-color: var(--scheme-color-primary);
+    --sidebar-menu-active-item-bg: var(--scheme-color-bg);
+    --sidebar-menu-active-item-color: var(--scheme-color-text);
+    --sidebar-menu-compact-hover-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+    --resize-handler-hover-bg: var(--scheme-color-primary);
+    --content-section-border-color: var(--scheme-color-bg);
+    --content-search-input-bg: var(--body-bg);
+    --content-search-icon-color: var(--scheme-color-faded);
+    --content-search-reset-button-bg: var(--scheme-color-bg-strongaccent);
+    --content-search-reset-button-color: var(--scheme-color-primary);
+    --content-search-reset-button-hover-bg: var(--scheme-color-primary);
+    --content-search-reset-button-hover-color: var(--scheme-color-text);
+    --content-top-border-color: var(--scheme-color-border);
+    --content-bg: var(--scheme-color-bg);
+    --user-avatar-icon-bg: var(--scheme-color-bg-strongaccent);
+    --user-avatar-icon-color: var(--scheme-color-faded);
+    --user-name-color: var(--scheme-color-faded);
+    --user-menu-impersonated-link-color: var(--scheme-color-primary);
+    --popover-bg: var(--scheme-color-bg-strongaccent);
+    --popover-border-color: var(--scheme-color-bg);
+    --popover-color: var(--scheme-color-text);
+    --popover-shadow: var(--shadow-xl);
+    --popover-max-width: 480px;
+    --dropdown-toggle-bg: var(--scheme-color-bg-accent);
+    --dropdown-toggle-color: var(--scheme-color-text);
+    --dropdown-toggle-border-color: var(--scheme-color-bg);
+    --dropdown-toggle-hover-border-color: var(--scheme-color-faded);
+    --dropdown-bg: var(--scheme-color-bg-strongaccent);
+    --dropdown-color: var(--scheme-color-text);
+    --dropdown-border-color: var(--scheme-color-bg-strongaccent);
+    --dropdown-link-color: var(--scheme-color-primary);
+    --dropdown-link-hover-bg: var(--scheme-color-bg);
+    --dropdown-icon-color: var(--scheme-color-primary);
+    --dropdown-appearance-icon-color: var(--scheme-color-text);
+    --dropdown-appearance-active-item-bg: var(--scheme-color-bg);
+    --dropdown-appearance-active-item-color: var(--scheme-color-text);
+    --datagrid-noresults-placeholder-bg: var(--scheme-color-bg-accent);
+    --datagrid-hidden-results-gradient-bg: var(--scheme-color-bg-accent);
+    --table-thead-color: var(--scheme-color-text);
+    --table-cell-color: var(--scheme-color-text);
+    --table-thead-marker-color: var(--scheme-color-faded);
+    --table-cell-border-color: var(--scheme-color-border);
+    --table-hover-cell-bg: var(--scheme-color-bg-accent);
+    --table-selected-cell-bg: var(--scheme-color-faded);
+    --table-thead-sorted-color: var(--scheme-color-primary);
+    --table-thead-sorted-marker-color: var(--scheme-color-primary);
+    --datalist-border-color: var(--scheme-color-border);
+    --datalist-label-color: var(--scheme-color-faded);
+    --datalist-value-color: var(--scheme-color-text);
+    --pagination-color: var(--scheme-color-primary);
+    --pagination-hover-border-color: transparent;
+    --pagination-active-bg: var(--scheme-color-primary);
+    --pagination-active-color: var(--scheme-color-text);
+    --field-language-badge-border-color: var(--scheme-color-faded);
+    --field-country-flag-border-color: var(--scheme-color-faded);
+    --modal-bg: var(--scheme-color-bg);
+    --modal-border-color: transparent;
+    --modal-header-bg: var(--scheme-color-bg-accent);
+    --modal-footer-bg: var(--scheme-color-bg-strongaccent);
+    --modal-title-color: var(--scheme-color-text);
+    --pagination-disabled-color: var(--scheme-color-faded);
+    --form-label-color: var(--scheme-color-faded);
+    --form-control-bg: var(--scheme-color-bg-strongaccent);
+    --form-input-border-color: var(--scheme-color-bg-strongaccent);
+    --form-input-hover-border-color: var(--scheme-color-text);
+    --form-input-shadow: 0;
+    --form-input-hover-shadow: 0;
+    --form-input-error-shadow: 0 0 0 1px rgba(43, 45, 80, 0), 0 0 0 1px var(--red-700), 0 0 0 2px var(--red-900), 0 1px 1px rgba(0, 0, 0, .08);
+    --form-input-text-color: var(--scheme-color-text);
+    --form-input-group-text-bg: var(--scheme-color-bg-accent);
+    --form-input-group-text-border-color: var(--scheme-color-border);
+    --form-switch-bg: var(--scheme-color-bg);
+    --form-switch-border-color: var(--scheme-color-primary);
+    --form-switch-checked-bg: var(--scheme-color-primary);
+    --form-type-check-input-border-color: var(--scheme-color-primary);
+    --form-type-check-input-box-shadow: 0 1px 2px 0 var(--scheme-color-bg-strongaccent);
+    --form-type-check-input-checked-bg: var(--scheme-color-primary);
+    --form-type-text-editor-toolbar-bg: var(--scheme-color-bg);
+    --form-type-text-editor-toolbar-button-color: var(--scheme-color-text);
+    --form-type-text-editor-toolbar-button-hover-color: var(--scheme-color-border);
+    --form-type-text-editor-toolbar-button-active-bg: var(--scheme-color-faded);
+    --form-type-text-editor-toolbar-button-active-color: var(--scheme-color-text);
+    --form-type-text-editor-dialog-bg: var(--scheme-color-bg-accent);
+    --form-type-text-editor-dialog-box-shadow: 0 4px 12px var(--scheme-color-bg-strongaccent);
+    --form-type-text-editor-content-pre-bg: var(--scheme-color-bg-accent);
+    --form-type-text-editor-content-pre-color: var(--scheme-color-text);
+    --form-type-collection-item-collapsed-hover-bg: var(--scheme-color-bg-strongaccent);
+    --form-type-autocomplete-dropdown-bg: var(--scheme-color-bg-strongaccent);
+    --form-type-autocomplete-dropdown-input-wrapper-bg: var(--scheme-color-bg-strongaccent);
+    --form-type-autocomplete-dropdown-input-border-color: transparent;
+    --form-type-autocomplete-dropdown-active-item-bg: var(--scheme-color-faded);
+    --form-type-autocomplete-close-button-bg: var(--scheme-color-bg);
+    --form-type-autocomplete-close-button-hover-bg: var(--scheme-color-faded);
+    --form-type-autocomplete-optgroup-bg: var(--form-type-autocomplete-dropdown-bg);
+    --form-type-autocomplete-optgroup-color: var(--scheme-color-faded);
+    --form-type-autocomplete-multi-item-bg: var(--scheme-color-bg-accent);
+    --form-type-autocomplete-multi-item-border-color: var(--scheme-color-border);
+    --form-type-autocomplete-multi-item-remove-button-hover-bg: var(--scheme-color-bg-strongaccent);
+    --form-help-color: var(--true-gray-500);
+    --form-help-error-color: var(--true-gray-200);
+    --form-help-active-color: var(--true-gray-300);
+    --form-tabs-border-color: var(--true-gray-200);
+    --form-panel-header-color: var(--true-gray-300);
+    --form-panel-help-color: var(--true-gray-500);
+    --form-panel-header-border-color: var(--true-gray-600);
+    --form-panel-icon-color: var(--true-gray-500);
+    --form-panel-collapse-marker-color: var(--true-gray-400);
+    --form-collection-item-collapse-marker-color: var(--true-gray-400);
+    --badge-box-shadow: inset 0 0 0 1px hsla(0, 0%, 96%, .3);
+    --badge-boolean-false-bg: hsla(0, 0%, 96%, .1);
+    --badge-boolean-false-box-shadow: inset 0 0 0 1px hsla(0, 0%, 96%, .3);
+    --badge-boolean-false-color: var(--true-gray-200);
+    --badge-boolean-true-bg: rgba(3, 102, 214, .18);
+    --badge-boolean-true-box-shadow: inset 0 0 0 1px rgba(90, 168, 252, .3);
+    --badge-boolean-true-color: #5aa8fc;
+    --badge-success-bg: rgba(22, 135, 0, .18);
+    --badge-success-box-shadow: inset 0 0 0 1px rgba(39, 236, 0, .3);
+    --badge-success-color: var(--green-300);
+    --badge-warning-bg: rgba(251, 202, 4, .18);
+    --badge-warning-box-shadow: inset 0 0 0 1px rgba(250, 201, 5, .3);
+    --badge-warning-color: var(--yellow-400);
+    --badge-danger-bg: rgba(182, 2, 5, .18);
+    --badge-danger-box-shadow: inset 0 0 0 1px rgba(253, 155, 157, .3);
+    --badge-danger-color: var(--red-300);
+    --badge-info-bg: rgba(3, 102, 214, .18);
+    --badge-info-box-shadow: inset 0 0 0 1px rgba(90, 168, 252, .3);
+    --badge-info-color: #5aa8fc;
+    --badge-primary-bg: rgba(3, 102, 214, .18);
+    --badge-primary-box-shadow: inset 0 0 0 1px rgba(90, 168, 252, .3);
+    --badge-primary-color: #5aa8fc;
+    --badge-secondary-bg: hsla(0, 0%, 96%, .1);
+    --badge-secondary-box-shadow: inset 0 0 0 1px hsla(0, 0%, 96%, .3);
+    --badge-secondary-color: var(--true-gray-200);
+    --badge-light-bg: hsla(0, 0%, 100%, .18);
+    --badge-light-box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .3);
+    --badge-light-color: #fff;
+    --badge-dark-bg: rgba(0, 0, 0, .18);
+    --badge-dark-box-shadow: inset 0 0 0 1px hsla(0, 0%, 60%, .3);
+    --badge-dark-color: #999;
+    --button-bg: var(--true-gray-600);
+    --button-color: var(--true-gray-200);
+    --button-hover-color: var(--true-gray-100);
+    --button-active-color: var(--true-gray-100);
+    --button-border-color: var(--true-gray-700);
+    --button-hover-border-color: var(--true-gray-600);
+    --button-shadow: 0;
+    --button-hover-shadow: 0;
+    --button-active-shadow: 0;
+    --button-active-primary-shadow: 0;
+    --button-primary-bg: var(--scheme-color-primary);
+    --button-primary-color: var(--scheme-color-text);
+    --button-secondary-bg: var(--scheme-color-bg-strongaccent);
+    --button-secondary-color: var(--scheme-color-text);
+    --button-info-bg: var(--scheme-color-primary);
+    --button-info-color: var(--scheme-color-text);
+    --button-success-bg: var(--color-success);
+    --button-success-color: var(--scheme-color-text);
+    --button-danger-bg: var(--color-danger);
+    --button-danger-color: var(--scheme-color-text);
+    --button-warning-bg: var(--color-warning);
+    --button-warning-color: var(--scheme-color-text);
+    --text-color: var(--scheme-color-text);
+    --text-color-dark: var(--scheme-color-text);
+    --text-color-light: var(--scheme-color-text);
+    --box-shadow-lg: 0 10px 15px -3px rgba(15, 23, 41, .1), 0 4px 6px -2px rgba(15, 23, 41, .05);
+    --content-panel-bg: #f8fafc;
+    --fieldset-bg: #f5f7fa;
+    --code-editor-string-color: #a5d6ff;
+    --code-editor-keyword-color: #ff7b72;
+    --code-editor-comment-color: #7ee787;
+    --code-editor-definition-color: #e36209;
+    --code-editor-variable-color: var(--form-input-text-color);
+    --code-editor-number-color: var(--form-input-text-color);
+    --code-editor-argument-color: #d2a8ff;
+    --code-editor-key-color: #a5d6ff;
+    --code-editor-attribute-color: #7ee787;
+    --code-editor-addition-bg: rgba(46, 160, 67, .3);
+    --code-editor-deletion-bg: rgba(218, 54, 51, .3);
+    --page-login-bg: var(--true-gray-100);
+    --text-blue-600: #075692;
+    --text-green-600: #0d5e42;
+    --text-indigo-600: #3c4caa;
+    --text-red-600: #a11b4c;
+    --text-yellow-600: #943505;
+    --color-primary: #70aefb;
+    --color-success: #7ee787;
+    --color-info: #0679b7;
+    --color-warning: #d97817;
+    --color-danger: var(--red-500);
+    --bs-danger-rgb: 239, 68, 68;
+    --highlight-bg: rgba(210, 153, 34, .4);
+    --text-on-primary: var(--scheme-color-text);
+    --text-muted: var(--scheme-color-faded);
+    --link-color: var(--scheme-color-primary);
+    --link-hover-color: var(--scheme-color-text);
+    --link-hover-decoration: none;
+    --scheme-color-border-color: var(--scheme-color-border);
+}
+.ea-light-scheme {
+    --button-primary-color: var(--scheme-color-bg);
+    --button-info-color: var(--scheme-color-bg);
+    --button-success-color: var(--scheme-color-bg);
+    --button-danger-color: var(--scheme-color-bg);
+    --button-warning-color: var(--scheme-color-bg);
+    --pagination-active-color: var(--scheme-color-bg);
+}
+
+input[type="search"]::placeholder {
+    color: var(--scheme-color-faded);
+    opacity: 1;
+}
+input[type="search"]::-webkit-input-placeholder {
+    color: var(--scheme-color-faded);
+}
+input[type="search"]::-moz-placeholder {
+    color: var(--scheme-color-faded);
+}
+input[type="search"]::-ms-input-placeholder {
+    color: var(--scheme-color-faded);
+}
+
+a.dropdown-appearance-button {
+    -webkit-appearance: none;
+}
+
+a:hover {
+    color: var(--scheme-color-text);
+}
+a.btn span {
+    transition: color 300ms ease;
+}
+a.btn:hover span {
+    color: var(--scheme-color-text);
+}
+.ea-light-scheme a.btn:hover span {
+    color: var(--scheme-color-bg);
+}
+
+#navigation-toggler {
+    opacity: 1;
+    filter: opacity(100%);
+}
+
+#main-menu .menu-item > a {
+    transition: color 300ms ease;
+}
+#main-menu .menu-item > a:hover {
+    color: var(--scheme-color-text);
+}
+#main-menu .menu-item > a .menu-icon {
+    transition: color 300ms ease;
+}
+#main-menu .menu-item > a:hover .menu-icon {
+    color: var(--scheme-color-text);
+}
+
+.form-widget .content-search-icon {
+    transition: color 300ms ease;
+}
+.form-widget:hover .content-search-icon {
+    color: var(--scheme-color-text);
+}
+
+.user-menu-wrapper .user-name {
+    transition: color 300ms ease;
+}
+.user-menu-wrapper:hover .user-name {
+    color: var(--scheme-color-text);
+}
+
+input[type="checkbox"] {
+    transition: border-color 300ms ease;
+    cursor: pointer;
+    border: 1px solid var(--scheme-color-primary);
+    background-color: unset;
+    appearance: none;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: var(--border-radius);
+}
+input[type="checkbox"]:hover {
+    border-color: var(--scheme-color-text);
+}
+input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27%3e%3cpath fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%273%27 d=%27M6 10l3 3l6-6%27/%3e%3c/svg%3e");
+}
+
+.form-widget input[type="text"] {
+    font-size: 1.2em;
+    padding: 1.2em 1.2em;
+    transition: border-color 300ms ease;
+}
+
+.form-widget input[type="text"]:hover {
+    border-color: var(--scheme-color-faded);
+}
+.form-widget input[type="text"]:focus {
+    border-color: var(--scheme-color-text);
+}
+
+.btn {
+    font-size: 1.1em;
+    padding: 0.5em 0.8em;
+    transition: opacity 300ms ease;
+    opacity: 0.75;
+}
+.btn:hover {
+    opacity: 1;
+}
+.page-link:hover {
+    color: var(--scheme-color-text);
+}
+.ea-light-scheme .btn-secondary:hover, .ea-light-scheme .btn-secondary:hover span {
+    color: inherit !important;
+}
+.ea-light-scheme .page-link {
+    color: var(--scheme-color-bg);
+}
+.ea-light-scheme .page-link:hover {
+    color: var(--scheme-color-bg);
+}
+.ea-lightbox-thumbnail img {
+    padding: 0;
+    border: 0;
+}
+.basicLightbox__placeholder img {
+    background: var(--scheme-color-bg-accent);
+    padding: 0;
+}
+.ea-detail .field-image img {
+    padding: 0;
+}
+.datagrid .ea-lightbox-thumbnail img {
+    padding: 0;
+    border: 0;
+}

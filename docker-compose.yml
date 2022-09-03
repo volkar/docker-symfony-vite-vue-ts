@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+    nginx:
+        build:
+          context: ./docker/nginx
+        container_name: nginx
+        volumes:
+            - .:/var/www:rw
+            - ./logs/nginx:/var/log/nginx/:rw
+        ports:
+            - 80:80
+        restart: always
+        depends_on:
+            - php
+    php:
+        build:
+          context: ./docker/php
+          args:
+            - PUID=${PUID}
+            - PGID=${PGID}
+            - INSTALL_XDEBUG=${INSTALL_XDEBUG}
+        container_name: php
+        restart: always
+        environment:
+            - POSTGRES_HOST=${POSTGRES_HOST}
+            - POSTGRES_DB=${POSTGRES_DB}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        depends_on:
+            - postgres
+        volumes:
+            - .:/var/www
+    postgres:
+        build:
+          context: ./docker/postgres
+        container_name: postgres
+        restart: always
+        environment:
+            - POSTGRES_DB=${POSTGRES_DB}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        ports:
+            - ${POSTGRES_HOST_PORT}:${POSTGRES_CONTAINER_PORT}
+        volumes:
+            - ./docker/postgres/data:/var/lib/postgresql/data:rw

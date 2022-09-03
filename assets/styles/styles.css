@@ -1,0 +1,71 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.4em;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #15181F;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    font-weight: 500;
+    color: #008fd9;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.1;
+    margin-bottom: 1em;
+}
+
+#app {
+    padding: 2em;
+    text-align: center;
+}
+
+article {
+    padding: 2em;
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-top: 1px solid rgba(200, 220, 255, 0.1);
+}
+
+.logo {
+    height: 2em;
+    padding: 1em 0.5em;
+    will-change: filter;
+}
+
+.logo.vite:hover {
+    filter: drop-shadow(0 0 0.5em #646cffaa);
+}
+.logo.vue:hover {
+    filter: drop-shadow(0 0 0.5em #42b883aa);
+}
+.logo.pinia:hover {
+    filter: drop-shadow(0 0 0.5em #ffe56caa);
+}
