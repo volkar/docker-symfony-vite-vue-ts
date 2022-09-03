@@ -82,8 +82,8 @@ npm run dev
 10. Open `http://localhost` in your browser.
 
 Admnistrator account created by fixtures is:
-login: **admin@admin.com**
-pass: **admin**
+- login: **admin@admin.com**
+- pass: **admin**
 
 ## Using
 
