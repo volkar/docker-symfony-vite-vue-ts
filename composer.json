@@ -1,6 +1,6 @@
 {
-    "name": "volkar/docker-vite-symfony-nginx-php-postgres",
-    "description": "Docker configuration with PHP 8.1+, NGINX 1.20+, PostgreSQL 14.2+ and Symfony 6.0 for REST service development.",
+    "name": "volkar/docker-symfony-vite-vue-ts",
+    "description": "Docker configuration with PHP 8.1+, NGINX 1.20+, PostgreSQL 14.2+ and Symfony 6.0 for SPA (Vue/Vite) development with EasyAdmin.",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable",

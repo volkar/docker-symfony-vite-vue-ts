@@ -63,23 +63,27 @@ docker-compose up -d --build
 ```
 make bash
 ```
-6. Load data from symfony fixtures
+6. Create database schema
+```
+symfony console doctrine:schema:update --force
+```
+7. Load data from symfony fixtures
 ```
 symfony console doctrine:fixtures:load
 ```
-7. Exit container's shell
+8. Exit container's shell
 ```
 exit
 ```
-8. Install all node's dependencies
+9. Install all node's dependencies
 ```
 npm install
 ```
-9. Run Vite
+10. Run Vite dev server
 ```
 npm run dev
 ```
-10. Open `http://localhost` in your browser.
+11. Open `http://localhost` in your browser.
 
 Administrator account created by fixtures (for EasyAdmin access):
 - login: **admin@admin.com**
