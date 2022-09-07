@@ -7,7 +7,15 @@ COPY ./conf/php.ini /usr/local/etc/php/php.ini
 
 # Packages
 RUN apk add --no-cache curl git build-base zlib-dev oniguruma-dev autoconf icu-dev bash
-RUN apk add --no-cache libpng libpng-dev && docker-php-ext-install gd && apk del libpng-dev
+
+# GD (png, jpeg, webp, freetype)
+RUN apk add --no-cache \
+        libjpeg-turbo-dev \
+        libpng-dev \
+        libwebp-dev \
+        freetype-dev
+RUN docker-php-ext-configure gd --with-jpeg --with-webp --with-freetype
+RUN docker-php-ext-install gd
 
 # Postgres
 RUN apk add --no-cache libpq-dev \
