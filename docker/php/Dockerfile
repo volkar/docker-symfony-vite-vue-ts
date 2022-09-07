@@ -7,6 +7,7 @@ COPY ./conf/php.ini /usr/local/etc/php/php.ini
 
 # Packages
 RUN apk add --no-cache curl git build-base zlib-dev oniguruma-dev autoconf icu-dev bash
+RUN apk add --no-cache libpng libpng-dev && docker-php-ext-install gd && apk del libpng-dev
 
 # Postgres
 RUN apk add --no-cache libpq-dev \
