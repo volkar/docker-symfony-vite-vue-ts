@@ -1,6 +1,4 @@
-# docker-symfony-vite-vue-ts
-
-Docker configuration with PHP 8.1+, NGINX 1.20+, PostgreSQL 14.2+ and Symfony 6.0 for SPA (Single Page Application) development with Vue/Vite, Pinia and EasyAdmin.
+# Docker configuration with PHP 8.1+, NGINX 1.20+, PostgreSQL 14.2+ and Symfony 6.0 for SPA (Single Page Application) development with Vue/Vite, Pinia and EasyAdmin.
 
 ![SPA preview](https://github.com/volkar/docker-symfony-vite-vue-ts/blob/main/preview.jpg?raw=true)
 
